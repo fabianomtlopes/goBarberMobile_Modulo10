@@ -24,7 +24,7 @@ export default function SelectProvider({ navigation }) {
     <Background>
       <Container>
         <ProvidersList
-          data={[{ providers }]}
+          data={providers}
           keyExtractor={provider => String(provider.id)}
           // item: provider = renomear a variavel item por provider
           renderItem={({ item: provider }) => (
