@@ -5,12 +5,11 @@ import api from '~/services/api';
 
 import Background from '~/components/Background';
 import Appointment from '~/components/Appointment';
+
 import { Container, Title, List } from './styles';
 
-// const data = [1, 2, 3, 4, 5];
-
 export default function Dashboard() {
-  const [appointments, setAppointments] = useState();
+  const [appointments, setAppointments] = useState([]);
 
   const isFocused = useIsFocused();
 
@@ -45,9 +44,10 @@ export default function Dashboard() {
     <Background>
       <Container>
         <Title>Agendamentos</Title>
+
         <List
           data={appointments}
-          keyEstractor={item => String(item.id)}
+          keyExtractor={item => String(item.id)}
           renderItem={({ item }) => (
             <Appointment onCancel={() => handleCancel(item.id)} data={item} />
           )}
