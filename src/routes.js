@@ -37,11 +37,9 @@ function NewStack() {
         component={SelectProvider}
         options={{
           title: 'Selecione o prestador',
-          // eslint-disable-next-line react/prop-types
           headerLeft: ({ navigation }) => (
             <TouchableOpacity
               onPress={() => {
-                // eslint-disable-next-line react/prop-types
                 navigation.navigate('Dashboard');
               }}
             >
@@ -55,11 +53,9 @@ function NewStack() {
         component={SelectDateTime}
         options={{
           title: 'Selecione o horário',
-          // eslint-disable-next-line react/prop-types
           headerLeft: ({ navigation }) => (
             <TouchableOpacity
               onPress={() => {
-                // eslint-disable-next-line react/prop-types
                 navigation.goBack();
               }}
             >
